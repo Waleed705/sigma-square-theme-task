@@ -14,8 +14,7 @@
                         <p>Sigma is an innovative, easily customizable, multi-purpose theme, focused on empowering users to build astonishing WordPress websites.</p>
                     </div>
                     <div class="front-buttons" >
-                        <div class="button-1">
-                            
+                        <div class="button-1">  
                             <a href="<?php the_permalink(60); ?>"><button class="button-18">Worth A Thousand Words</button></a>
                         </div>
                         <div class="btn2">
@@ -34,15 +33,26 @@
             <div class="blog-post">
                 <div class="post-image">
                     <a href="<?php the_permalink(); ?>"> <?php the_post_thumbnail(); ?></a>
-                   
                 </div>
-                <?php echo get_the_date(); ?>
-                <?php the_excerpt(); ?>
-                <a href="<?php the_permalink(); ?>">Read more</a>
+                <div class="date">
+                        <p>
+                            <a href="<?php echo get_permalink(87) . '?author_id=' . get_the_author_meta('ID'); ?>">
+                                Theme <?php echo get_the_author(); ?>
+                            </a>
+                        </p>
+                    <span class="span"> - </span>
+                        <p>
+                            <a href="<?php echo get_permalink(82) . '?date=' . get_the_time('Y-m-d'); ?>">
+                                <?php echo get_the_date(); ?>
+                            </a>
+                        </p>
+                    <span class="span"> - </span>
+                        <p><a href="<?php the_permalink(); ?>"><?php echo get_the_time(); ?></a></p>
+                </div>
                 <div class="post-heading">
-                <a href="<?php the_permalink(); ?>"> <h1><?php the_title(); ?></h1></a>
-                    
+                    <a href="<?php the_permalink(); ?>"> <h2><?php the_title(); ?></h2></a>
                 </div>
+                <p><?php the_excerpt() ?></p>
             </div>
             <?php } ?>
         </div>
