@@ -47,7 +47,7 @@
                             </a>
                         </p>
                     <span class="span"> - </span>
-                        <p><a href="<?php the_permalink(); ?>"><?php echo get_the_time(); ?></a></p>
+                        <p><a href=""><?php echo get_the_time(); ?></a></p>
                 </div>
                 <div class="post-heading">
                     <a href="<?php the_permalink(); ?>"> <h2><?php the_title(); ?></h2></a>
